@@ -28,15 +28,14 @@ Users should be able to:
 
 ### Screenshot
 
-![](./public/manage_desktop_full.png)
 ![](./public/manage_laptop_full.png)
 ![](./public/manage_laptop.png)
 ![](./public/manage_iphone_12.png)
 
 ### Links
 
-- [Solution URL: ](https://github.com/victorOJILE/manage_landingpage)
-- [Live Site URL: ](https://https://victorojile.github.io/manage_landingpage)
+- [Click to see solution](https://github.com/victorOJILE/manage_landingpage)
+- [Visit live site](https://https://victorojile.github.io/manage_landingpage)
 
 ## My process
 
@@ -57,5 +56,5 @@ One part I will like to highlight about this project is the footer section, wher
 
 ## Author
 
-- Website - [Ojile Victor](https://victorojile.github.io/portfolio)
+- Portfolio Website - [Ojile Victor](https://victorojile.github.io/portfolio)
 - Frontend Mentor - [@victorOJILE](https://www.frontendmentor.io/profile/victorOJILE)
