@@ -1,0 +1,283 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: varella;
+		src: url(../public/VarelaRound-Regular.ttf)
+	}
+
+	html {
+		scroll-behavior: smooth;
+		font-size: 14px
+	}
+
+	body {
+		--brightRed: hsl(12, 88%, 59%);
+		--paleRed: hsl(13, 100%, 96%);
+		--darkBlue: hsl(228, 39%, 23%);
+		--vDarkBlue: hsl(233, 12%, 13%);
+		--darkGrayishBlue: hsl(227, 12%, 61%);
+		--lightGray: hsl(0, 0%, 98%);
+		--lightPaleRed: hsla(12, 100%, 97%, 1);
+		background: url(../public/bg-tablet-pattern.svg);
+		background-size: 120%;
+		background-position: top -100px right -100px;
+		background-repeat: no-repeat
+	}
+
+	* {
+		font-family: varella, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		line-height: 150%
+	}
+
+	@media (min-width: 576px) {
+		body {
+			background-size: 90%
+		}
+	}
+	
+	@media (min-width: 768px) {
+		body {
+			background-size: 50%
+		}
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: var(--darkBlue)
+	}
+
+	footer {
+		background-color: var(--vDarkBlue);
+		color: var(--lightGray)
+	}
+
+	footer a:hover, footer a:focus {
+		color: var(--brightRed)
+	}
+}
+
+@layer components {
+	.nav-mobile-bg {
+		@apply fixed top-0 -left-full w-full h-screen z-50;
+		background: linear-gradient(180deg, #FFFFFFA3 0px, #020229DE 150%);
+		transition: left 0.4s ease-out;
+	}
+	
+	.nav-mobile-bg > ul {
+		margin: 0 auto;
+		background-color: white;
+		color: var(--darkBlue);
+		max-width: 30rem;
+		text-align: center;
+	}
+	
+	.nav-mobile-bg li {
+		padding: 1rem 0;
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	.nav-mobile-bg li:hover {
+		text-decoration: underline;
+	}
+	
+	.nav-mobile-bg li:first-child {
+		border-style: solid none solid none;
+	}
+
+	.btn, .red-btn {
+		border-radius: 50px;
+		font-weight: 600;
+		text-decoration: none;
+		text-align: center;
+	}
+
+	.red-btn {
+		background-color: var(--brightRed);
+		color: var(--paleRed);
+	}
+	
+	.red-btn-shadow {
+		display: inline-block;
+		font-size: 0.85rem;
+		padding: 0.85rem 2.5rem;
+		box-shadow: 0px 7px 11px -3px hsl(12, 88%, 59%)
+	}
+	
+	.red-btn-shadow:hover, .red-btn-shadow:focus {
+		opacity: 0.8;
+		text-decoration: none;
+	}
+		
+	.carousel {
+		display: flex;
+		align-items: stretch;
+		overflow: auto;
+		white-space: nowrap;
+		scroll-behavior: smooth;
+		scroll-snap-type: x mandatory;
+		-webkit-scroll-snap-type: x mandatory;
+		-ms-scroll-snap-type: x mandatory;
+	}
+
+	.carousel > * {
+		flex: 0 0 auto;
+		width: 100%;
+		max-width: 28rem;
+		padding: 0 1.5rem;
+		margin: 0 1rem;
+		scroll-snap-align: center;
+		-ms-scroll-snap-align: center;
+	}
+
+	.carousel_dots {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	.carousel_dots div {
+		width: 0.5rem;
+		height: 0.5rem;
+		margin-right: 5px;
+		border-radius: 50%;
+		border: 1px solid var(--brightRed);
+	}
+
+	.footer-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+@layer utilities {
+	.flex-ac {
+		@apply flex items-center
+	}
+	
+	.container {
+		margin: 0 auto
+	}
+	
+	.paleRed {
+		color: var(--paleRed);
+	}
+
+	.bg-paleRed {
+		background-color: var(--paleRed);
+	}
+
+	.brightRed {
+		color: var(--brightRed)
+	}
+
+	.bg-brightRed {
+		background-color: var(--brightRed);
+	}
+	
+	/* On a larger screen, bg-lightPaleRed would become transparent while bg-lightPaleRed2 will not */
+	.bg-lightPaleRed {
+		background-color: var(--lightPaleRed)
+	}
+
+	.bg-lightPaleRed2 {
+		background-color: var(--lightPaleRed)
+	}
+	
+	.lightGray {
+		font-weight: 500;
+		color: hsla(210, 5%, 64%, 1)
+	}
+}
+
+@media (min-width: 768px) {
+	.bg-lightPaleRed {
+		background-color: transparent
+	}
+
+	.nav-mobile-bg {
+		background: transparent;
+		position: static;
+		height: max-content;
+		padding: 0;
+		width: auto;
+		margin: 0 auto;
+	}
+	
+	.nav-mobile-bg > ul {
+		background-color: transparent;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		max-width: none;
+		padding: 0.1rem 0
+	}
+	
+	.nav-mobile-bg li {
+		display: inline-block;
+		padding: 1rem 0;
+		margin: 0 0.95rem;
+		font-size: 0.75rem;
+		color: #7B7BA1;
+		border: none;
+		border-bottom: 3px solid transparent;
+	}
+	
+	.nav-mobile-bg li:first-child {
+		border-style: none none solid none;
+	}
+
+	.nav-mobile-bg li:hover {
+		border-bottom: 3px solid #55CF9E;
+		text-decoration: none;
+	}
+
+	.footer-grid {
+		grid-template-columns: 30% 20% 20% 30%;
+		grid-template-rows: 2;
+		grid-template-areas:
+		'A B B C'
+		'D B B E';
+	}
+
+	.col-1 {
+		grid-area: A;
+	}
+
+	.col-2 {
+		grid-area: B;
+	}
+
+	.col-3 {
+		grid-area: C;
+	}
+
+	.col-4 {
+		grid-area: D;
+	}
+
+	.col-5 {
+		grid-area: E;
+	}
+}
+
+@media (min-width: 1024px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media (min-width: 1440px) {
+	html {
+		font-size: 19px;
+	}
+}
+
+@media (min-width: 1536px) {
+	html {
+		font-size: 22px;
+	}
+}
