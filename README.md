@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- [Click to see solution](https://github.com/victorOJILE/manage_landingpage)
-- [Visit live site](https://https://victorojile.github.io/manage_landingpage)
+- [Click to see solution](https://github.com/victorOJILE/manage)
+- [Visit live site](https://https://victorojile.github.io/manage)
 
 ## My process
 
@@ -51,7 +51,7 @@ Users should be able to:
 
 ### What I learned
 
-One part I will like to highlight about this project is the footer section, where I brushed up on working with grid.
+One part I will like to highlight about this project is the footer section, where I brushed up on working with grid. Please, is there any simpler method of creating such responsive footer?
 
 ## Author
 
