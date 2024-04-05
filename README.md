@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - [Click to see solution](https://github.com/victorOJILE/manage)
-- [Visit live site](https://https://victorojile.github.io/manage)
+- [Visit live site](https://victorojile.github.io/manage)
 
 ## My process
 
