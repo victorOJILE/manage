@@ -29,7 +29,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./public/manage_laptop_full.png)
-![](./public/manage_laptop.png)
 ![](./public/manage_iphone_12.png)
 
 ### Links
